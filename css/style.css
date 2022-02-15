@@ -7,18 +7,45 @@
  body {
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+ }
+
+ img {
+    max-width: 100%;
+    display: block;
  }
 
  /* Typography */
 
+ h1,
+ h2,
+ h3 {
+   font-family: 'Lora', serif;
+   font-weight: 400;
+   color: #143774;
+   margin-top: 0;
+ }
+
  h1 {
-    font-family: 'Lora', serif;
-    font-weight: 400;
-    color: #143774;
     font-size: 2rem;
     margin: 0;
  }
 
+ a {
+   color: #1792d2;
+ }
+
+ a:hover,
+ a:focus {
+    color: #143774;
+ }
+
+ strong {
+    font-weight: 700;
+ }
+
+ /* h1 subtitle */
  .subtitle {
      font-weight: 700;
      color: #1792d2;
@@ -26,6 +53,31 @@
      margin: 0;
  }
 
+ .article-title {
+   font-size: 1.5rem;
+ }
+
+ .article-read-more,
+ .article-info {
+    font-size: .875rem;
+ }
+
+ .article-read-more {
+    color: #1792d2;
+    text-decoration: none;
+    font-weight: 700;
+ }
+
+ .article-read-more:hover,
+ .article-read-more:focus {
+   color: #143774;
+   text-decoration: underline;
+}
+
+.article-info {
+    margin: 2em 0;
+}
+ 
  /* Layout */
 
  .container {
@@ -34,8 +86,9 @@
     margin: 0 auto;
  }
 
- .container-nav {
+ .container-flex {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
  }
 
@@ -43,17 +96,32 @@
  header {
     background-color: #f8f8f8;
     padding: 2em 0;
+    text-align: center;
  }
 
- @media (max-width: 675px) {
-   .container-nav {
-      flex-direction: column;
-   }
-   header {
-      text-align: center;
-   }
-}
+ @media (min-width: 675px) {
+    .container-flex {
+       flex-direction: row;
+    }
 
+    main {
+       width: 75%;
+    }
+
+    aside {
+       width: 20%;
+    }
+ }
+
+ main {
+   width: 75%;
+ }
+
+ aside {
+   width: 20%;
+ }
+
+ 
  /* Navigation */
 
  nav ul {
@@ -94,4 +162,26 @@
    nav li {
       margin: .5em 0;
    }
+}
+
+/* Articles */
+
+.article-featured {
+   border-bottom: 1px solid #707070;
+   padding-bottom: 1em;
+   margin-bottom: 2em;
+}
+
+.article-recent {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 2em;
+}
+
+.article-recent-main {
+   order: 2;
+}
+
+.article-recenr-secondary {
+   order: 1;
 }
