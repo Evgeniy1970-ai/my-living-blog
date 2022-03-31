@@ -116,8 +116,8 @@
  }
 
  footer {
-    background-color: #143774;
-    color: #fff;
+    background-color: #345480;
+    color: rgba(255, 255, 255, .65);
     text-align: center;
     padding: 3em 0;
  }
